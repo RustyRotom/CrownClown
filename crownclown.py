@@ -13,7 +13,7 @@ reddit = praw.Reddit(
 
 )
 
-subreddit = reddit.subreddit("politics+worldnews+")
+subreddit = reddit.subreddit("AskReddit+aww+conservative+conspiracy+explainlikeimfive+funny+gaming+LifeProTips+mildlyinfuriating+movies+Music+news+nottheonion+pics+politics+science+Showerthoughts+sports+todayilearned+videos+worldnews")
 
 autism = [
 """
@@ -71,9 +71,20 @@ Also, because of innovations in the way vaccines are made, today’s vaccines co
   """,
 ]
 
+jokes = [
+  """
+  A friend of mine went to take the vaccine for covid yesterday
+After getting vaccinated, his vision was blurred and when he reached home, he called the hospital that gave him the vaccine for advice asking if he should be hospitalized.
+
+The hospital told him to come back and collect his glasses
+  """,
+]
+
 trigger_list = [
   "i am anti-vax",
-  "vaccines cause autism"
+  "vaccines cause autism",
+  "fuck the vax",
+  "don't take the vax",
 ]
 
 for comment in subreddit.stream.comments(skip_existing=True):
@@ -97,4 +108,9 @@ for comment in subreddit.stream.comments(skip_existing=True):
     print("----------------------")
     print(comment.body)
     comment.reply(overwhelm[0])
+  if " vax " in comment.body or " vaccine " in comment.body:
+    print("----------------------")
+    print(comment.body)
+    comment.reply(jokes[0])
+
 
