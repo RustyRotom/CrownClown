@@ -101,28 +101,25 @@ The hospital told him to come back and collect his glasses
   They died, Carol. A lot of people died.
   """, 
   "[Your comment reminds me of this picture](https://imgur.com/a/iwrznMR)",
-  "[Your comment reminds me of this picture](https://imgur.com/a/ctNuhxk",
-  "[Your comment reminds me of this picture](https://imgur.com/a/ny11ks0",
-  "[Your comment reminds me of this picture](https://imgur.com/a/nFHOuNX",
-  "[Your comment reminds me of this picture](https://imgur.com/a/IYHJAUr",
-  "[Your comment reminds me of this picture](https://imgur.com/a/aphyveb",
-  "[Your comment reminds me of this picture](https://imgur.com/a/rVwTQaI",
-  "[Your comment reminds me of this picture]https://imgur.com/a/VRFhN6f",
-  "[Your comment reminds me of this picture]https://imgur.com/a/wpjn81X",
-  "[Your comment reminds me of this picture]https://imgur.com/a/dSbofaa",
-  "[Your comment reminds me of this picture]https://imgur.com/a/Bip6sET",
-  "[Your comment reminds me of this picture]https://imgur.com/a/4asCHq8",
-  "[Your comment reminds me of this picture]https://imgur.com/a/T7Irvzi",
-  "[Your comment reminds me of this picture]https://imgur.com/a/Q1p7IIf",
-  "[Your comment reminds me of this picture]https://imgur.com/a/ROCrmvC",
-  "[Your comment reminds me of this picture]https://imgur.com/a/SC6qmgc",
-  "[Your comment reminds me of this picture]https://imgur.com/a/DmeD2Xa",
-  "[Your comment reminds me of this picture]https://imgur.com/a/G3dJPTK",
-  "[Your comment reminds me of this picture]https://imgur.com/a/ng5kniv",
-  "[Your comment reminds me of this picture]https://imgur.com/a/VHqLtjU",
-
-
-
+  "[Your comment reminds me of this picture](https://imgur.com/a/ctNuhxk)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/ny11ks0)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/nFHOuNX)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/IYHJAUr)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/aphyveb)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/rVwTQaI)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/VRFhN6f)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/wpjn81X)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/dSbofaa)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/Bip6sET)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/4asCHq8)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/T7Irvzi)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/Q1p7IIf)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/ROCrmvC)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/SC6qmgc)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/DmeD2Xa)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/G3dJPTK)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/ng5kniv)",
+  "[Your comment reminds me of this picture]https://imgur.com/a/VHqLtjU)",
 
 ]
 
@@ -166,6 +163,7 @@ for comment in subreddit.stream.comments(skip_existing=True):
     if " vax " in comment.body or " vaccine " in comment.body:
       print("----------------------")
       print(comment.body)
-      comment.reply(jokes[0])
+      random_index = random.randint(0, len(jokes) - 1)
+      comment.reply(jokes[random_index])
 
 
