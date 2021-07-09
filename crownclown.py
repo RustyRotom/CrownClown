@@ -24,7 +24,7 @@ This should have been the final nail in the coffin for the autism/vaccines link 
 This component was removed from all scheduled childhood vaccines in the year 2000, solely because of the scary word “mercury” and not for any fears or evidence for harmful effects. If it were contributing to rising cases of autism then you would expect a dramatic drop following its removal. Instead, like the MMR in Japan, the opposite is true, and autism continues to rise.
 
 Of course these are not the only pieces of evidence, and scientists continue to test, and re-test the safety of vaccines. A recently published exhaustive review examining 12,000 research articles covering 8 different vaccines concluded there was no link between vaccines and autism. While scientists still don’t know the exact causes of autism, we are looking like mad and one thing we can be extremely confident of is that it’s not vaccines.
-"""
+""",
 ]
 
 spread = [
@@ -34,7 +34,7 @@ spread = [
 But you absolutely definitely cannot get the flu from the vaccine because there is no “live” virus in it to infect you. The mild response you get following a flu vaccine, or any vaccine for that matter, is in fact a good sign since it indicates your immune system is responding, thus the vaccine is working.
 
 In the pages of history there are cases of vaccines causing the disease they were meant to prevent – for example in the USA in 1955, a bad batch of polio vaccine exposed several thousand children to live polio virus upon vaccination – but advances in technology and testing ensure the likelihood of this happening again is virtually zero.
-"""
+""",
 ]
 
 sides = [
@@ -44,7 +44,7 @@ sides = [
 The only debate is one that has been manufactured by those with a vested interest in undermining confidence in vaccines. Those like Andrew Wakefield, who has been accused of deliberate fraud by the British Medical Journal for suggesting there was a link between the MMR and autism all the while pocketing money from lawyers tasked with suing the vaccine manufacturers.
 
 Wakefield was also poised to submit a patent on a single measles vaccine, from which he stood to profit substantially once he’d scared everyone away from the triple antigen MMR. He also stood to make millions from a diagnostic kit he had developed for autistic enterocolitis, a new condition he claimed to have identified in his 1998 Lancet paper (which has since been retracted by the publisher). So yes, I guess there are two sides, there is the side where all the evidence lies in support of vaccination, then there are the cranks and quacks with a vested interest.
-  """
+  """,
 ]
 
 polio = [
@@ -56,7 +56,7 @@ Indeed measles was also heading the same way – Australia was declared measles 
 In Australia in 2010, doctors were shocked by the death of a 22 year old who died from diphtheria, a disease now unheard of, after contracting it from a friend who caught it during an overseas holiday. It is believed she wasn’t vaccinated against the bacterial infection.
 
 In many ways, vaccines are a victim of their own success, since they create an “out-of-mind, out-of-sight” scenario lulling us into a false sense of security. We don’t see kids in calipers anymore, or hospitals full of iron lungs, but if we stop vaccinating then we create an environment where they can return.
-  """
+  """,
 ]
 
 overwhelm = [
@@ -68,7 +68,7 @@ The Institute of Medicine specifically looked for evidence that vaccination is l
 With respect to overwhelming kids’ immune systems, the tiny amount of antigens in vaccines pales in to comparison to what they are exposed to every day via playing, eating and drinking. The amount of immune challenges that children fight every day (2,000 — 6,000) in the environment is significantly greater than the number of antigens or reactive particles in all their vaccinations combined (about 150 for the entire vaccination schedule).
 
 Also, because of innovations in the way vaccines are made, today’s vaccines contain far fewer antigens than those administered in the past. The new pertussis vaccine for example has significantly less antigens than the older style “whole cell” vaccine meaning it causes fewer side effects (but that it is also less effective).
-  """
+  """,
 ]
 
 trigger_list = [
@@ -80,26 +80,21 @@ for comment in subreddit.stream.comments(skip_existing=True):
   if " vaccines cause autism " in comment.body:
     print("----------------------")
     print(comment.body)
-    random_index = random.randint(0, len(pump_list) - 1)
     comment.reply(autism[0])
   if " vaccines spread covid " in comment.body:
     print("----------------------")
     print(comment.body)
-    random_index = random.randint(0, len(pump_list) - 1)
     comment.reply(spread[0])
   if " there are two sides " in comment.body:
     print("----------------------")
     print(comment.body)
-    random_index = random.randint(0, len(pump_list) - 1)
     comment.reply(sides[0])
   if " polio is gone " in comment.body:
     print("----------------------")
     print(comment.body)
-    random_index = random.randint(0, len(pump_list) - 1)
     comment.reply(polio[0])
   if " vaccines overwhelm " in comment.body:
     print("----------------------")
     print(comment.body)
-    random_index = random.randint(0, len(pump_list) - 1)
     comment.reply(overwhelm[0])
 
