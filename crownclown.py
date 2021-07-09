@@ -71,6 +71,16 @@ Also, because of innovations in the way vaccines are made, today’s vaccines co
   """,
 ]
 
+nanotech = [
+  "The vaccine contains very few ingredients. One of them being mRNA, which is the active ingredient in the vaccine, in addition to lipids salts and sugars, which are included to stabilize that mRNA. Other than that, there are no microchips, and there is no chance of anyone being able to trace you as a result of receiving this vaccine.",
+]
+
+hoax = [
+  """
+  "I think I made a mistake. I thought this was a hoax, but it's not." Those were some of the last words uttered by a 30-year-old Texas man who attended a "coronavirus party" thinking Covid-19 was a hoax.
+  """
+]
+
 jokes = [
   """
   A friend of mine went to take the vaccine for covid yesterday
@@ -78,6 +88,42 @@ After getting vaccinated, his vision was blurred and when he reached home, he ca
 
 The hospital told him to come back and collect his glasses
   """,
+  """
+  Person: How do you feel about those anti-vaxxers using your illness / genetic disorder to promote their agenda?
+
+  Autist:
+
+  I don't mind it. Being autistic isn't all that bad compared to being an idiot.
+  """,
+  """
+  People say "well what did people do before vaccines?" as if that's an argument for going natural.
+
+  They died, Carol. A lot of people died.
+  """, 
+  "[Your comment reminds me of this picture](https://imgur.com/a/iwrznMR)",
+  "[Your comment reminds me of this picture](https://imgur.com/a/ctNuhxk",
+  "[Your comment reminds me of this picture](https://imgur.com/a/ny11ks0",
+  "[Your comment reminds me of this picture](https://imgur.com/a/nFHOuNX",
+  "[Your comment reminds me of this picture](https://imgur.com/a/IYHJAUr",
+  "[Your comment reminds me of this picture](https://imgur.com/a/aphyveb",
+  "[Your comment reminds me of this picture](https://imgur.com/a/rVwTQaI",
+  "[Your comment reminds me of this picture]https://imgur.com/a/VRFhN6f",
+  "[Your comment reminds me of this picture]https://imgur.com/a/wpjn81X",
+  "[Your comment reminds me of this picture]https://imgur.com/a/dSbofaa",
+  "[Your comment reminds me of this picture]https://imgur.com/a/Bip6sET",
+  "[Your comment reminds me of this picture]https://imgur.com/a/4asCHq8",
+  "[Your comment reminds me of this picture]https://imgur.com/a/T7Irvzi",
+  "[Your comment reminds me of this picture]https://imgur.com/a/Q1p7IIf",
+  "[Your comment reminds me of this picture]https://imgur.com/a/ROCrmvC",
+  "[Your comment reminds me of this picture]https://imgur.com/a/SC6qmgc",
+  "[Your comment reminds me of this picture]https://imgur.com/a/DmeD2Xa",
+  "[Your comment reminds me of this picture]https://imgur.com/a/G3dJPTK",
+  "[Your comment reminds me of this picture]https://imgur.com/a/ng5kniv",
+  "[Your comment reminds me of this picture]https://imgur.com/a/VHqLtjU",
+
+
+
+
 ]
 
 trigger_list = [
@@ -88,29 +134,38 @@ trigger_list = [
 ]
 
 for comment in subreddit.stream.comments(skip_existing=True):
-  if " vaccines cause autism " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(autism[0])
-  if " vaccines spread covid " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(spread[0])
-  if " there are two sides " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(sides[0])
-  if " polio is gone " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(polio[0])
-  if " vaccines overwhelm " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(overwhelm[0])
-  if " vax " in comment.body or " vaccine " in comment.body:
-    print("----------------------")
-    print(comment.body)
-    comment.reply(jokes[0])
+  if comment.author.name != "EvanRobinsontry" and comment.author.name != "None":
+    if " vaccines cause autism " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(autism[0])
+    if " vaccines spread covid " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(spread[0])
+    if " there are two sides " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(sides[0])
+    if " polio is gone " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(polio[0])
+    if " vaccines overwhelm " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(overwhelm[0])
+    if " harmful nanotechnology " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(nanotech[0])
+    if " corona is a hoax " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(hoax[0])
+    if " vax " in comment.body or " vaccine " in comment.body:
+      print("----------------------")
+      print(comment.body)
+      comment.reply(jokes[0])
 
 
