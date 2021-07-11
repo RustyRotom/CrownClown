@@ -124,15 +124,29 @@ The hospital told him to come back and collect his glasses
 ]
 
 trigger_list = [
-  "i am anti-vax",
+  "I am anti-vax ",
   "vaccines cause autism",
   "fuck the vax",
   "don't take the vax",
+  " fake corona ",
+  " the fake virus ",
+  " "
+
+]
+
+vaxsym = [
+  "vax",
+  "vaxx",
+  "vaccine",
+  "jab",
+  "shot",
+  "injection",
+  "inoculation"
 ]
 
 for comment in subreddit.stream.comments(skip_existing=True):
   if comment.author.name != "EvanRobinsontry" and comment.author.name != "None":
-    if " vaccines cause autism " in comment.body:
+    if " vax " in comment.body and :
       print("----------------------")
       print(comment.body)
       comment.reply(autism[0])
@@ -160,7 +174,7 @@ for comment in subreddit.stream.comments(skip_existing=True):
       print("----------------------")
       print(comment.body)
       comment.reply(hoax[0])
-    if " vax " in comment.body or " vaccine " in comment.body:
+    if " please don't vax " in comment.body:
       print("----------------------")
       print(comment.body)
       random_index = random.randint(0, len(jokes) - 1)
